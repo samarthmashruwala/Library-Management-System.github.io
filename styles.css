@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    overflow-x: hidden;
+}
+.font1  {
+   font-size: 60px;
+   font-weight: 600;
+}
+.font2 {
+   font-size: 14px;
+   font-weight: 300;
+   padding: 10px;
+   line-height: 22px;
+}
+/*------- main---------- */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/picture2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    width: 200px;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #36f4d4;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.btn-links{
+    text-decoration: none;
+    color: white;
+}
+.text-box h1 {
+    font-size: 62px;
+}
+.text-box p {
+    margin: 10px 0px 40px;
+    font-size: 14px;
+}
+nav .f1 {
+    display: none;
+}
+@media(max-width:700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #36cef4;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .f1 {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        padding: 20px;
+        margin-top: 10px;
+    }
+}
+/*-----------books------------ */
+.card {
+    border: 0;
+}
+.books {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 10% 0 0 0;
+}
+.book {
+    transition: 0.5s;
+}
+.book:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+/*------- facilities--------- */
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 10% 0 0 0;
+}
+.facilities-col {
+    padding-top: 7%;
+    text-align: left;
+    margin-bottom: 5%;
+}
+.facilities img {
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 5%;
+}
+/* -----------timing------------- */
+.timing {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 10% 0 0 0;
+    
+}
+/*---------- community---------- */
+.community {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 10% 0 0 0;
+}
+.community-col {
+    padding-top: 5%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5%;
+}
+.community-col img {
+    width: 80%;
+    border-radius: 10px;
+    padding-bottom: 5%;
+    transform: scale(1);
+    transition: 1.1s ease-in-out;
+}
+.community-col img:hover {
+    transform: scale(1.1);
+}
+/* ---------demand---------- */
+.demand h1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 5%;
+
+}
+.demand p {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5%;
+}
+.demand{
+    padding-bottom: 10%;
+}
+.conditions{
+    width: 70%;
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 5px solid transparent;
+    border-radius: 1.25rem;
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+}
+.conditions p{
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+/* ---------about----------- */
+.about {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 3%;
+    min-height: 60vh;
+    width: 100%;
+    background: #cad7f5;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.about-links{
+    background:rgba(255, 251, 251, 0.601);
+    height: 95%;
+    margin: 0 10% 10% 10%;
+    border-radius: 50px;
+    padding: 10px 10px 10px 25px;
+    text-align: left;
+}
+iframe{    
+    border-radius: 15px;
+    width: 90%;
+}
+.about-map{
+    margin-top: 20px;
+}
+.useful-links a{
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        .page3{
+            width: 80%;
+            margin: auto;
+            
+            margin-top: 5%;
+        }
+        .head{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="navbars">
+        <div class="container-fluid">
+            <nav class="navbar bg-dark navbar-dark px-3">
+                <div class="navbar-brand">
+                    <h3>Website</h3>
+                </div>
+                <div>
+                    <ul class="navbar nav">
+                        <li class="nav-item"><a href="./prac.html" class="nav-link text-light">page1</a></li>
+                        <li class="nav-item"><a href="./prac2.html" class="nav-link text-light">page2</a></li>
+                        <li class="nav-item"><a href="./prac3.html" class="nav-link text-light">page3</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section class="page3">
+        <div class="head">
+
+            <h1>mypage 3
+            </h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, sunt?</p>
+        </div>
+        <div class="container">
+                <div class="m-auto d-block col-12 bg-light p-4 my-5 shadow border">
+                    <form action="" class="form ">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name :</label>
+                            <input type="text" class="form-control" name="name"  id="n1"/>
+                            <span id="namemsg" class="text-danger d-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="number" class="form-label">number :</label>
+                            <input type="number" class="form-control" name="number" id="n2"/>
+                            <span id="nummsg" class="text-danger d-block"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">email :</label>
+                            <input type="email" class="form-control" name="email" id="n3"/>
+                            <span id="mailmsg" class="text-danger d-block"></span>
+                        </div>
+                        <button class="mt-5 mx-3 btn btn-outline-primary">submit</button>
+                        <button class="mt-5 mx-3 btn btn-outline-warning">reset</button>
+                    </form>
+                </div>
+        </div>
+    </section>
+    <script src="./jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            let namemsg=true;
+            let nummsg=true;
+            let mailmsg=true;
+            
+            $('#n1').keyup(function(){
+                nameCheck();
+            })
+
+            function nameCheck(){
+                let name=$('#n1').val();
+                if(name==""){
+                    $('#namemsg').html("enter name")
+                    alert("enter name");
+                    namemsg=false;
+                    return false;
+                }
+                else{
+                    
+                    $('#namemsg').html("")
+                }
+            }
+
+            $('#n2').keyup(function(){
+                numCheck();
+            })
+
+            function numCheck(){
+                let num=$("#n2").val();
+
+                if(num==""){
+                    $("#nummsg").html("enter number")
+                    alert("enter number");
+                    nummsg=false;
+                    return false;
+                }
+                else{
+                    $("#nummsg").html("")
+
+                }
+            }
+
+            $("#n3").keyup(function(){
+                mailCheck();
+            })
+
+            function mailCheck(){
+                let mail=$("#n3").val()
+
+                if(mail==""){
+                    $("#mailmsg").html("enter email")
+                    alert("enter email");
+                    mailmsg=false;
+                    return false;
+                }
+                else{
+                    $("#mailmsg").html("")
+
+                }
+            }
+
+            $('form').submit(function(){
+                namemsg=true;
+                nummsg=true;
+                mailmsg=true;
+
+                nameCheck();
+                numCheck();
+                mailCheck();
+
+                if(namemsg==true && nummsg==true && mailmsg==true){
+
+                    return true;
+                }
+                else{
+                    alert("fill the boxes")
+                    return false;
+                }
+            })
+        })
+    </script>
+</body>
+</html>

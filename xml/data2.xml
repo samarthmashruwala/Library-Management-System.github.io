@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<booklet>
+<book>
+   <sno>205</sno>
+   <link>images/book5.jpg</link>
+   <name>Do It Today</name>
+   <author>Darius Foroux</author>
+   <date>20 June,2018</date>
+</book>
+<book>
+   <sno>206</sno>
+   <link>images/book6.jpg</link>
+   <name>The Alchemist</name>
+   <author>Paulo Coelho</author>
+   <date>12 july,1988</date>
+</book>
+<book>
+   <sno>207</sno>
+   <link>images/book7.jpg</link>
+   <name>Believe in Yourself </name>
+   <author>Dr. Joseph Murphy </author>
+   <date>18 febuary,1955</date>
+</book>
+<book>
+   <sno>208</sno>
+   <link>images/book8.jpg</link>
+   <name>The Monk Who Sold His Ferrari</name>
+   <author>Robin Sharma</author>
+   <date>21 april,1999</date>
+</book>
+</booklet>

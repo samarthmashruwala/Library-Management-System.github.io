@@ -1,0 +1,32 @@
+<?xml version = "1.0"?>
+<booklet>
+<book>
+   <sno>201</sno>
+   <link>images/book1.jpg</link>
+   <name>Atomic Habits</name>
+   <author>James Clear </author>
+   <date>16 october,2018</date>
+</book>
+<book>
+   <sno>202</sno>
+   <link>images/book2.jpg</link>
+   <name>Manifest</name>
+   <author>Roxie Nafousi</author>
+   <date>6 january,2022</date>
+</book>
+<book>
+   <sno>203</sno>
+   <link>images/book3.jpg</link>
+   <name>Life's amazing secrets</name>
+   <author>Gaur Gopal Das</author>
+   <date>17 september,2018</date>
+</book>
+<book>
+   <sno>204</sno>
+   <link>images/book4.jpg</link>
+   <name>The Psychology of Money</name>
+   <author>Morgan Housel</author>
+   <date>8 september,2020</date>
+</book>
+
+</booklet>

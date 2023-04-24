@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        /* .navs {
+            width: 100%;
+            min-height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./../images/backimage.jpg");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        } */
+        .page4{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="navs">
+        <nav class="navbar navbar-dark bg-dark px-3">
+            <div class="navbar-brand">
+                <h3>page 4</h3>
+            </div>
+            <div>
+                <ul class="navbar nav">
+                    <li class="nav-item"><a href="exam.html" class="nav-link text-light ">home</a></li>
+                    <li class="nav-item"><a href="exam2.html" class="nav-link text-light ">home</a></li>
+                    <li class="nav-item"><a href="exam3.html" class="nav-link text-light ">home</a></li>
+                    <li class="nav-item"><a href="exam4.html" class="nav-link text-light ">home</a></li>
+                    <li class="nav-item"><a href="exam5.html" class="nav-link text-light ">home</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="page4">
+            <h1>my page 4</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, vero?</p>
+        </div>
+
+        <div class="container my-5 border p-4 bg-light shadow">
+            <div class="btns d-flex justify-content-center my-4">
+                <button class="btn btn-outline-primary btn1 mx-3">btn1</button>
+                <button class="btn btn-outline-primary btn2 mx-3">btn2</button>
+                <button class="btn btn-outline-primary btn3 mx-3">btn3</button>
+                <button class="btn btn-outline-primary btn4 mx-3">btn4</button>
+            </div>
+            <div class="row bg-dark p-3 shadow mt-3 s1">
+                <div class="col-3">
+                    <img src="./book1.jpg" height=150 width=150 alt="">
+                </div>
+                <div class="col-9">
+                    <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem aliquam enim
+                        autem. Impedit soluta, ea, quaerat aspernatur dolor praesentium cum harum architecto, blanditiis
+                        repellat quisquam accusamus tempora temporibus explicabo delectus.</p>
+                </div>
+            </div>
+            <div class="row bg-dark p-3 shadow mt-3 s2">
+                <div class="col-9">
+                    <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem aliquam enim
+                        autem. Impedit soluta, ea, quaerat aspernatur dolor praesentium cum harum architecto, blanditiis
+                        repellat quisquam accusamus tempora temporibus explicabo delectus.</p>
+                </div>
+                <div class="col-3">
+                    <img src="./book1.jpg" height=150 width=150 alt="">
+                </div>
+            </div>
+            <div class="row bg-dark p-3 shadow mt-3 s3">
+                <div class="col-3">
+                    <img src="./book1.jpg" height=150 width=150 alt="">
+                </div>
+                <div class="col-9">
+                    <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem aliquam enim
+                        autem. Impedit soluta, ea, quaerat aspernatur dolor praesentium cum harum architecto, blanditiis
+                        repellat quisquam accusamus tempora temporibus explicabo delectus.</p>
+                </div>
+            </div>
+            <div class="row bg-dark p-3 shadow mt-3 s4">
+                <div class="col-9">
+                    <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem aliquam enim
+                        autem. Impedit soluta, ea, quaerat aspernatur dolor praesentium cum harum architecto, blanditiis
+                        repellat quisquam accusamus tempora temporibus explicabo delectus.</p>
+                </div>
+                <div class="col-3">
+                    <img src="./book1.jpg" height=150 width=150 alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./../jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".s1").hide();
+            $(".s2").hide();
+            $(".s3").hide();
+            $(".s4").hide();
+
+            $(".btn1").click(function(){
+                $(".s1").slideToggle();
+            })
+            $(".btn2").click(function(){
+                $(".s2").slideToggle();
+            })
+            $(".btn3").click(function(){
+                $(".s3").slideToggle();
+            })
+            $(".btn4").click(function(){
+                $(".s4").slideToggle();
+            })
+        })
+    </script>
+</body>
+
+</html>

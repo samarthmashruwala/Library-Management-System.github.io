@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .page1{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 5%;
+        }
+    </style>
+</head>
+<body>
+    <section class="navs">
+        <div class="container-fluid">
+            <nav class="navbar navbar-dark bg-dark px-3">
+                <div class="navbar-brand">
+                    <h3>website</h3>
+                </div>
+                <div>
+                    <ul class="navbar nav">
+                        <li class="nav-item"><a href="./prac.html" class="nav-link text-light text-tabed">page1</a></li>
+                        <li class="nav-item"><a href="./prac2.html" class="nav-link text-light text-tabed">page2</a></li>
+                        <li class="nav-item"><a href="./prac3.html" class="nav-link text-light text-tabed">page3</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section class="page1">
+        <h1>my page1</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, nesciunt.
+        </p>
+        <div class="containe-fluid mt-5">
+            <div class="row here">
+                
+            </div>
+        </div>
+    </section>
+    <script src="./jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type:"GET",
+                url:"prac.xml",
+                dataType:"xml",
+                success:funcpass
+            })
+        })
+
+        function funcpass(xml){
+            $(xml).find('info').each(function(){
+                let image=$(this).find('image').text();
+                let title=$(this).find('title').text();
+                let text=$(this).find('text').text();
+
+                $('.here').append(
+                    `
+                    <div class="col-4">
+                    <div class="card m-3">
+                        <div class="card-img">
+                            <img src="${image}" alt="" class="img-fluid" height=100 width=100>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${title}</h5>
+                            <p class="card-text">${text}</p>
+                        </div>
+                    </div>
+                </div>
+                    `
+                )
+
+            })
+        }
+    </script>
+</body>
+</html>

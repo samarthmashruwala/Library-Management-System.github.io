@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        .page5{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 5%;
+        }
+    </style>
+</head>
+<body>
+    <section class="navs">
+        <nav class="navbar navbar-dark bg-dark px-3">
+            <div class="navbar-brand">
+                <h3>page 5</h3>
+            </div>
+            <div>
+                <ul class="navbar nav">
+                    <li class="nav-item"><a href="exam.html" class="nav-link text-light">home</a></li>
+                    <li class="nav-item"><a href="exam2.html" class="nav-link text-light">home</a></li>
+                    <li class="nav-item"><a href="exam3.html" class="nav-link text-light">home</a></li>
+                    <li class="nav-item"><a href="exam4.html" class="nav-link text-light">home</a></li>
+                    <li class="nav-item"><a href="exam5.html" class="nav-link text-light">home</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <div class="page5">
+            <h1>my page 5</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quaerat?</p>
+        </div>
+        <div class="container">
+            <div class="col-12 m-auto d-block bg-light p-4 shadow my-3">
+                <form action="#" class="form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">name :</label>
+                        <input type="text" id="name" name="name" class="form-control">
+                        <span class="d-block text-danger" id="nc"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="num" class="form-label">number :</label>
+                        <input type="text" id="num" name="num" class="form-control">
+                        <span class="d-block text-danger" id="nch"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mail" class="form-label">email :</label>
+                        <input type="text" id="email" name="mail" class="form-control">
+                        <span class="d-block text-danger" id="mc"></span>
+                    </div>
+                    <button class="btn btn-outline-primary mt-3 mx-2" id="btn1">submit</button>
+                    <button class="btn btn-outline-warning mt-3 mx-2" id="btn2">reset</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="./../jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            let name_err=true;
+            let num_err=true;
+            let mail_err=true;
+
+            $("#name").keyup(function(){
+                nameCheck();
+            })
+
+            function nameCheck(){
+                let name=$("#name").val();
+
+                if(name==""){
+                    $("#nc").html("**enter name");
+                    name_err=false;
+                    return false;
+                }
+                else{
+                    $("#nc").html("");
+                    return true;
+                }
+            }
+
+            $("#num").keyup(function(){
+                numCheck();
+            })
+
+            function numCheck(){
+                let num=$("#num").val();
+
+                if(num==""){
+                    $("#nch").text("**enter number");
+                    num_err=false;
+                    return false;
+                }
+                else{
+                    $("#nch").text("");
+                    return true;
+                }
+            }
+
+            $("#email").keyup(function(){
+                mailCheck();
+            })
+
+            function mailCheck(){
+                let mail=$("#email").val();
+
+                if(mail==""){
+                    $("#mc").text("**enter email");
+                    mail_err=false;
+                    return false;
+                }
+                else{
+                  $("#mc").text("");
+                  return true;
+              }
+            }
+
+            $("#btn1").click(function(){
+                name_err=true;
+                num_err=true;
+                mail_err=true;
+
+                nameCheck();
+                numCheck();
+                mailCheck();
+
+                if(name_err==true && num_err==true && mail_err==true){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            })
+        })
+    </script>
+</body>
+</html>

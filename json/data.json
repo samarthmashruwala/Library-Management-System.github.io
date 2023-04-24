@@ -1,0 +1,32 @@
+[
+    {
+        "sr_no":"1",
+        "category":"Student",
+        "age":"Under 12",
+        "timing":"10.00 AM To 12.00 PM"
+    },
+    {
+        "sr_no":"2",
+        "category":"Student",
+        "age":"Under 18",
+        "timing":"12.00 PM To 03.00 PM"
+    },
+    {
+        "sr_no":"3",
+        "category":"Student",
+        "age":"Under 24",
+        "timing":"4.00 PM To 07.00 PM"
+    },
+    {
+        "sr_no":"4",
+        "category":"Citizen",
+        "age":"Under 45",
+        "timing":"07.00 PM To 09.00 PM"
+    },
+    {
+        "sr_no":"5",
+        "category":"Senior Citizen",
+        "age":"Above 45",
+        "timing":"08.30 AM To 10.00 AM"
+    }
+]
